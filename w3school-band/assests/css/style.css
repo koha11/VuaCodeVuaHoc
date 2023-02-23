@@ -1,0 +1,629 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+#main{
+    height: 1000px;
+}
+
+.clear{
+    clear: both;
+}
+
+.text-white{
+    color: #fff !important;
+}
+
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after{
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-third{
+    width: 33.33333%;
+    float: left;
+    padding-right: 8px;
+    padding-left: 8px;
+}
+
+.col-half{
+    width: 49,99999%;
+}
+
+.col-full{
+    width: 100%;
+}
+
+.text-center{
+    text-align: center;
+}
+.p8{
+    padding: 8px !important;
+}
+/* SAU PHẦN NÀY SẼ LÀ HEADER  */
+
+#header{
+    height: 46.5px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+#nav {
+    line-height: 46.5px;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+}
+
+#nav, .subnav{
+    list-style: none;
+}
+
+#nav .nav-arrow-down{
+    font-size: 14px;
+}
+
+#nav>li{
+    display: inline-block; 
+}
+
+#nav li{
+    position: relative;
+}
+
+/* menu cấp 1 một */
+#nav > li > a{ 
+    color: white;
+    text-transform: uppercase;
+}
+
+#nav li a{  
+    text-decoration: none;
+    line-height: 46.5px;
+    padding: 0 24px;
+    display: block;
+}
+
+#nav li:hover .subnav{
+    display: block;
+}
+
+
+/* menu cấp hai  */
+#nav .subnav{
+    display: none;
+    min-width: 160px;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* menu cấp hai */
+#nav .subnav a{
+    color: black;
+    padding: 0 16px;
+    line-height: 30.5px;
+}
+
+#nav a:hover{
+    background-color: #ccc;
+}
+
+/* nút tìm kiếm */
+
+#header .search-btn{
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#header .search-btn:hover{
+    background-color: #f44336;
+}
+
+#header .search-icon{
+    color: #fff;
+    font-size: 20px;
+    line-height: 46.5px;
+    padding: 0 21px;
+}
+
+/* TỪ CHỖ NÀY LÀ SLIDER   */
+
+#slider{
+    margin-top: 46.5px;
+    background: url(../img/slider/chicago.jpg) top center / cover no-repeat;
+    width: 100%;
+    padding-top: 50%;
+    position: relative;
+}
+
+#slider .text-inimage{
+    position: absolute;
+    bottom: 54px;
+    left: 0;
+    right: 0;
+    font-weight: 700;
+}
+
+#slider .text-title{
+    font-size: 24px;
+
+}
+
+#slider .text-decription{
+    margin-top: 25px;
+    font-size: 15px;
+}
+
+/* PHẦN CONTENT  */
+
+#content {
+}
+
+/* TRƯỚC HẾT LÀ ABOUT */
+#content>.content-section{
+   margin: 0 149px;
+}
+
+#content .content-section{
+    line-height: 1.5;
+    font-size: 15px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 16px;
+}
+
+#content .title-section{
+    font-weight: 400;   
+    margin: 10px 0;
+    letter-spacing: 4px;
+}
+
+#content .decription-section{
+    opacity: 0.6;
+    font-style: italic;
+    margin: 15px 0;
+}
+#content .text-about{
+    margin: 15px 0;
+    text-align: justify;
+}
+
+/* PHẦN MEMBER CỦA about */
+
+#content .member-about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+#content .member-about p{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#content .member-about img{
+    width: 60%;
+    border-radius: 4px;
+}
+
+/* PHẦN TOUR */
+
+#content .tour-background{
+    background-color: black;
+    color: #fff;
+}
+
+.tour .decription-section{
+    margin: 15px 0 30px 0 !important;
+}
+
+#content .tour-ticket{
+    background-color: #fff;
+    color: #757575;
+    list-style-type: none;
+}
+
+#content .tour-ticket li{
+    padding: 8px 16px;
+    border-bottom: solid 1px #ddd;
+}
+
+#content .tour-ticket span{
+    color: #fff;
+    background-color: #f44336;
+    padding: 0 8px;
+    margin-left: 16px; 
+    display: inline-block;
+}
+
+#content .tour-ticket .ticket-icon{
+    float: right;
+    background-color: #000;
+    border-radius: 50%;
+    margin-right: 16px;
+}
+
+/* ĐỊA ĐIỂM TOUR  */
+
+#content .tour-places{
+    color: black;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+#content .tour-places>div{
+    margin-bottom: 16px;
+}
+
+#content .places-body{
+    background-color: #fff;
+    padding: 0 16px;
+    font-size: 15px;
+    display: inline-block;
+}
+
+.tour-heading{
+    font-weight: bolder;
+    margin: 15px 0;
+}
+
+.tour-time{
+    margin: 15px 0;
+    opacity: 0.6;
+}
+
+.tour-decription{
+    margin: 15px 0;
+}
+
+.tour-btn{
+   margin-bottom: 16px;
+   padding: 8px 16px;
+   background-color: #000;
+   text-decoration: none;
+   display: inline-block;
+   cursor: pointer;
+   font-size: 15px;
+   border: none;
+}
+
+.tour-btn:hover{
+    background-color: #ccc;
+    color: #000 !important;
+}
+
+#content>.tour-places{
+    /* padding: 0 8px; */
+}
+
+#content .tour-places img{
+    width: 100%;
+    /* padding: 0 8px; */
+}
+
+#content .tour-places img:hover{
+    opacity: 0.6;
+}
+
+/* PHẦN CONTACT */
+
+.contact-body{
+    padding: 32px 0;
+}
+
+.contact-info{
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+.contact-info .contact-icons{
+    margin-right: 10px;
+    color: #000;
+}
+
+.contact-input{
+    float: right;
+}
+
+
+.contact-input-one{
+    margin-bottom: 8px !important;
+}
+
+.contact-input-one > div{
+    padding: 0 8px;
+}
+
+.contact-col > input{
+    border: solid #ccc 1px;
+}
+
+
+.contact-input .contact-btn{
+    background-color: #000;
+    padding: 8px 16px;
+    margin: 16px 0;
+    float: right;
+    cursor: pointer;
+    border: none;
+}
+
+.contact-btn:hover{
+    background-color: #ccc;
+    color: #000 !important;
+}
+
+/* PHẦN MAP  */
+
+.map img{
+    filter: grayscale(50%);
+    max-width: 100%;
+    height: auto;
+}
+
+/* PHẦN FOOTER  */
+
+#footer{
+    opacity: 0.6;
+}
+
+#footer div{
+    padding: 64px 16px;
+}
+
+#footer .credit{
+    margin: 15px 0;
+}
+
+#footer .credit a{
+    color: #000;
+}
+
+#footer .footer-icons{
+    font-size: 40px;
+}
+
+.footer-icons:hover{
+    opacity: 0.4;
+}
+
+
+
+/* PHẦN MODAL CỦA TOUR  */
+
+.modal{
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    z-index: 2;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    display: none;
+}
+
+.modal-container{
+    width: 900px;
+    min-height: 450px;
+    background-color: #fff;
+    position: relative;
+    max-width: calc(100% - 36px);
+    animation: modalFadeIn ease .5s ;
+}
+
+.modal-close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    /* margin: 15px 15px; */
+    padding: 8px 16px;
+    background-color: #009688;
+    border: none;
+    font-size: 20px;
+    /* color: white; */
+}
+
+.modal-close>i{
+    line-height: 1.5;
+}
+
+.modal-close:hover, .modal-pay:hover, .modal-close-footer:hover  {
+    background-color: #ccc !important;
+    cursor: pointer;
+    color: #000 !important;
+}
+
+.modal-header{
+    background-color: #009688;
+    padding: 16px 32px;
+    font-size: 30px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 6px;
+}
+
+.modal-header-icon{
+    margin-right: 10px;
+}
+
+.modal-body,.modal-footer {
+    padding: 0 16px;
+}
+
+.modal-body .modal-labels{
+    display: block;
+    margin: 15px 0;
+}
+
+#value-ticket , #value-modal-email{
+    padding: 8px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.modal-pay{
+    background-color: #009688;
+    border: none;
+    width: 100%;
+    padding: 16px;
+    margin: 16px 0;
+}
+
+/* phần modal footer  */
+.modal-footer{
+    position: relative;
+}
+
+.modal-footer .modal-close-footer{
+    background-color: #f44336;
+    padding: 8px 16px;
+    margin: 16px 0;
+    border: none;
+    font-size: 15px;
+    position: absolute;
+}
+
+.modal-footer .modal-help{
+    position: absolute;
+    right: 0;
+    margin: 15px 0;
+    padding-right: 16px;
+}
+
+.open{
+    display: flex;
+}
+
+.close{
+    display: none !important;
+}
+
+@keyframes modalFadeIn{
+    from{
+        opacity: 0.5;
+        transform: translateY(-140px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+/* TABLET */
+@media (min-width: 740px) and (max-width: 1023px) {
+
+}
+
+/* MOBILE */
+@media (max-width: 743px) {
+    .more, .search-btn{
+        display: none !important;
+    }
+
+    .home{
+        width: unset;
+    }
+
+    .merch{
+        display: block !important;
+    }
+
+    #header{
+        box-shadow: none;
+    }
+
+    .mobile-menu{
+        float: left;
+        display: none !important;
+        width: 100%;
+        background-color: #000;
+    }
+
+    .mobile-sub-menu{
+        display: block !important;
+        float: right;
+        padding: 12px 24px;
+        padding-bottom: 19px;
+    }
+
+    .mobile-sub-menu:hover{
+        background-color: #ccc;
+        cursor: pointer;
+    }
+
+    #content .member-about{
+        flex-direction: column;
+    }
+
+    #content .member-about .col{
+        width: 100%;
+    }
+
+    #content .member-about img{
+        margin-bottom: 14px;
+    }
+
+    #content .tour-places>div {
+        width: 100%;
+    }
+
+    .contact-col, .contact-col input{
+        width: 100%;
+    }
+
+    .contact-input, .contact-col{
+        padding: 0 !important;
+    }
+
+    .contact-input .row{
+        margin: 0;
+    }
+
+    #footer .footer-icons{
+        font-size: 24px;
+    }
+
+    .mobile-menu-open{
+        display: inline-block !important;
+    }
+
+    .modal-container{
+        transform: translateY(-118px);
+    }
+
+}
